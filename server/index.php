@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 echo "POST";
 }
 elseif ($_SERVER['REQUEST_METHOD'] == "GET") {
-auth("get");
+auth("get","");
 }
 elseif ($_SERVER['REQUEST_METHOD'] == "PUT") {
 $content="";
