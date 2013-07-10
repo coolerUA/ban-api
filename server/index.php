@@ -16,6 +16,5 @@ $s = fopen("php://input", "r");
 fclose($s);
 Header("HTTP/1.1 201 Created");
 $data=array(explode("$",$content));
-debug($data);
 auth("put",$content);
 }
