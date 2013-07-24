@@ -36,7 +36,7 @@ fi
 	    ;;
             -b | --bulk ) 
 	    check_param $1 $2
-	    cat -E $2 |curl -X PUT http://$API_URL/`echo "\`hostname\`|$3"|base64`/`echo $4|base64`/ 
+	    cat -E $2 |curl -X PUT http://$API_URL/`echo "\`hostname\`|$3"|base64`/`echo $4|base64`/ --data @-
 	    exit 1
 	    ;;
 	    \?) print_help;;
