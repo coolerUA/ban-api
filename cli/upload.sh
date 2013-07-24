@@ -30,12 +30,12 @@ while true;
 fi
         case "$1" in
             -s | --single ) 
-	    check_param $1
+	    check_param $1 $2
 	    echo "$2$" |curl -X PUT http://API_URL/`echo "`hostname`|$3"|base64`/`echo $4|base64`/ 
 	    exit 1
 	    ;;
             -b | --bulk ) 
-	    check_param $1
+	    check_param $1 $2
 	    cat -E $2 |curl -X PUT http://API_URL/`echo "`hostname`|$3"|base64`/`echo $4|base64`/ 
 	    exit 1
 	    ;;
